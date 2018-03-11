@@ -7,6 +7,7 @@ WORKDIR /app
 
 # COPY files/identidock_1.py /app
 # COPY files/test_identidock_1.py /app
+COPY files /app
 COPY cmd.sh /
 
 # EXPOSE 9090 9191
