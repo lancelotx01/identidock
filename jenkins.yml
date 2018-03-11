@@ -2,6 +2,8 @@ identidock-1:
   build: ./apps/identidock-1
   expose:
     - "9090"
+  volumes:
+    - ./apps/identidock-1:/app
   environment:
     ENV: PROD
   links:
