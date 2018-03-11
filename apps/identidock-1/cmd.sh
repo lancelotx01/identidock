@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-cd /app/files
-
 if [ "$ENV" == 'DEV' ]; then
   echo "Running Development Environment"
   exec python "identidock_1.py"
