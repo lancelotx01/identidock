@@ -1,0 +1,24 @@
+identidock-1:
+  build: ./apps/identidock-1
+  hostname: identidock-1
+  ports:
+    - "5002:5000"
+  environment:
+    ENV: UNIT
+  volumes:
+    - ./apps/identidock-1:/app
+  links:
+    - dnmonster
+    - redis
+
+dnmonster:
+  image: amouat/dnmonster:1.0
+
+redis:
+  image: redis:3.0
+
+identijenks:
+  build: ./apps/identijenks
+  hostname: jenkins
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
