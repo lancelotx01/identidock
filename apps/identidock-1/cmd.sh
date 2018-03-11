@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd files
+cd /app/files
 
 if [ "$ENV" == 'DEV' ]; then
   echo "Running Development Environment"
