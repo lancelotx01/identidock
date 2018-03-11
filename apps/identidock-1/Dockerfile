@@ -5,9 +5,9 @@ RUN pip install Flask==0.10.1 uWSGI==2.0.8 requests==2.5.1 redis==2.10.3
 
 WORKDIR /app
 
-# COPY files/identidock_1.py /app
-# COPY files/test_identidock_1.py /app
-COPY files /app
+COPY files/identidock_1.py /app
+COPY files/test_identidock_1.py /app
+# COPY files /app
 COPY cmd.sh /
 
 # EXPOSE 9090 9191
